@@ -1,0 +1,51 @@
+/* @import 'tailwindcss'; */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.partner-card {
+    min-height: 110px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.partner-logo {
+    max-height: 55px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition:
+        filter 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.footer-link {
+    transition:
+        color 0.2s ease,
+        padding-left 0.2s ease;
+}
+.footer-link:hover {
+    color: #ffffff !important;
+    padding-left: 4px;
+}
